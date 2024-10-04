@@ -1,14 +1,13 @@
 package tests;
 
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.codeborne.selenide.Condition;
 
-import static com.codeborne.selenide.Selenide.$$;
 import static org.assertj.core.api.Assertions.assertThat;
-
 
 public class HomePageTest extends BaseTest {
     @BeforeMethod
@@ -23,9 +22,16 @@ public class HomePageTest extends BaseTest {
         pageManager.homePage.navBar.shouldBe(Condition.visible);
         pageManager.homePage.logoReel.shouldBe(Condition.visible);
         Actions actions = Selenide.actions();
-        actions.click(pageManager.homePage.whyInsider).pause(100).click(pageManager.homePage.whyInsiderFirstLink).perform();
-        actions.click(pageManager.homePage.whyInsider).pause(500).click(pageManager.homePage.whyInsiderSecondLink).perform();
-        actions.click(pageManager.homePage.whyInsider).pause(500).click(pageManager.homePage.whyInsiderThirdLink).perform();
+        actions.click(pageManager.homePage.whyInsider).click(pageManager.homePage.whyInsiderFirstLink).perform();
+        actions.click(pageManager.homePage.whyInsider).click(pageManager.homePage.whyInsiderSecondLink).perform();
+        actions.click(pageManager.homePage.whyInsider).click(pageManager.homePage.whyInsiderThirdLink).perform();
+        actions.click(pageManager.homePage.navBarPlatform).click(pageManager.homePage.customerProfiles).perform();
+        actions.click(pageManager.homePage.navBarPlatform).click(pageManager.homePage.audienceSegmentation).perform();
+        //pageManager.homePage.audienceSegmentation.click();
+
+
+
+
         }
 
 
