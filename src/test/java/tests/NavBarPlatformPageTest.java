@@ -19,6 +19,8 @@ public class NavBarPlatformPageTest extends BaseTest {
     @Test
     public void TestNavBarPlatformPage() {
         Actions actions = Selenide.actions();
+        actions.click(pageManager.navBarPlatformPage.navBarPlatform).click(pageManager.navBarPlatformPage.platformOverview).perform();
+        actions.click(pageManager.navBarPlatformPage.navBarPlatform).click(pageManager.navBarPlatformPage.customerDatManagement).perform();
         actions.click(pageManager.navBarPlatformPage.navBarPlatform).click(pageManager.navBarPlatformPage.customerProfiles).perform();
         actions.click(pageManager.navBarPlatformPage.navBarPlatform).click(pageManager.navBarPlatformPage.audienceSegmentation).perform();
         actions.click(pageManager.navBarPlatformPage.navBarPlatform).click(pageManager.navBarPlatformPage.predictBehavior).perform();

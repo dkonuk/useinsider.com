@@ -13,4 +13,7 @@ public class PageFactory {
     public static NavBarPlatformPage buildNavBarPlatformPage() {
         return new NavBarPlatformPage("");
     }
+    public static NavBarPlatformRightPage buildNavBarPlatformRightPage() {
+        return new NavBarPlatformRightPage("");
+    }
 }
