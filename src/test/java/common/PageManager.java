@@ -18,6 +18,7 @@ public class PageManager {
         navBarSolutionPage =PageFactory.buildNavBarSolutionPage();
         navBarPlatformPage = PageFactory.buildNavBarPlatformPage();
         navBarPlatformRightPage = PageFactory.buildNavBarPlatformRightPage();
+        navBarSolutionPage = PageFactory.buildNavBarSolutionPage();
     }
 
 }
