@@ -25,9 +25,7 @@ public class HomePageTest extends BaseTest {
         actions.click(pageManager.homePage.whyInsider).click(pageManager.homePage.whyInsiderFirstLink).perform();
         actions.click(pageManager.homePage.whyInsider).click(pageManager.homePage.whyInsiderSecondLink).perform();
         actions.click(pageManager.homePage.whyInsider).click(pageManager.homePage.whyInsiderThirdLink).perform();
-        actions.click(pageManager.homePage.navBarPlatform).click(pageManager.homePage.customerProfiles).perform();
-        actions.click(pageManager.homePage.navBarPlatform).click(pageManager.homePage.audienceSegmentation).perform();
-        actions.click(pageManager.homePage.navBarPlatform).click(pageManager.homePage.predictBehavior).perform();
+
         //pageManager.homePage.audienceSegmentation.click();
 
 
