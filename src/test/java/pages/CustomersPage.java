@@ -1,9 +1,9 @@
 package pages;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.*;
 
 public class CustomersPage extends BasePage {
 
@@ -28,10 +28,9 @@ public class CustomersPage extends BasePage {
     public int nthChild;
     public String businessObjectiveSlider = "div.objective-objective-nav:nth-child(2)";
     public String businessObjectiveChildren = " button.objective-objective-button";
-    public String businessObjectiveButtonsParent = "button.objective_visible_on_mobile.objective-slider-next:nth-child(3)";
-    public String businessObjectiveButtonsChildren = "div.objective-slider-item";
     public SelenideElement businessObjectiveNextButton = $(".objective-slider-navigation:nth-child(10) > button.objective-slider-next");
-    public SelenideElement businessObjectivePreviousButton = $(".objective-slider-navigation:nth-child(10) > button.objective-slider-previous");
+    public SelenideElement businessObjectivePreviousButton = $(".objective-slider-navigation:nth-child(10) > button.objective-slider-prev");
+    public ElementsCollection businessObjectiveElements = $$(".objective-slider-item");
 
 
 
@@ -43,5 +42,8 @@ public class CustomersPage extends BasePage {
     }
     public SelenideElement getBusinessObjectiveSliderWebElement() {
         return $("div.objective-objective-nav:nth-child(2) > button.objective-objective-button:nth-child(" + nthChild + ")");
+    }
+    public SelenideElement getBusinessObjectiveButtonsWebElement() {
+        return $("button.objective-visible-on-mobile.objective-slider-next:nth-child(" + nthChild + ")");
     }
 }

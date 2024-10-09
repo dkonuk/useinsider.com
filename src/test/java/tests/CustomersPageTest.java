@@ -43,17 +43,14 @@ public class CustomersPageTest extends BaseTest {
             Actions actions = Selenide.actions();
             actions.click(pageManager.customersPage.getBusinessObjectiveSliderWebElement()).perform();
         }
-        int businessObjectiveButtonChildSize = iterateOverAllChildren(pageManager.customersPage.businessObjectiveButtonsParent, pageManager.customersPage.businessObjectiveButtonsChildren);
-        System.out.println(businessObjectiveButtonChildSize);
-        for (pageManager.customersPage.nthChild = 1; pageManager.customersPage.nthChild <= businessObjectiveButtonChildSize; pageManager.customersPage.nthChild++) {
+        int businessObjectiveButtonChildSize = pageManager.customersPage.businessObjectiveElements.size();
+        for (int i = 1; i <= businessObjectiveButtonChildSize; i++) {
             pageManager.customersPage.businessObjectiveNextButton.click();
             Actions actions = Selenide.actions();
-        actions.pause(5000).perform();
+        actions.pause(500).perform();
         }
-        for (pageManager.customersPage.nthChild = 1; pageManager.customersPage.nthChild <= businessObjectiveButtonChildSize; pageManager.customersPage.nthChild++) {
+        for (int i = 1; i <= businessObjectiveButtonChildSize; i++) {
             pageManager.customersPage.businessObjectivePreviousButton.click();
-            Actions actions = Selenide.actions();
-        actions.pause(5000).perform();
         }
 
     }
