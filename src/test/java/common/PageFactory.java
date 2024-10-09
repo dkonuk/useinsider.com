@@ -16,5 +16,8 @@ public class PageFactory {
     public static NavBarPlatformRightPage buildNavBarPlatformRightPage() {
         return new NavBarPlatformRightPage("");
     }
+    public static CustomersPage buildCustomersPage() {
+        return new CustomersPage("/our-customers");
+    }
 
 }

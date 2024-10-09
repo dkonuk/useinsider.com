@@ -10,6 +10,7 @@ public class PageManager {
     public NavBarSolutionPage navBarSolutionPage;
     public NavBarPlatformPage navBarPlatformPage;
     public NavBarPlatformRightPage navBarPlatformRightPage;
+    public CustomersPage customersPage;
 
 
     public PageManager() {
@@ -19,6 +20,7 @@ public class PageManager {
         navBarPlatformPage = PageFactory.buildNavBarPlatformPage();
         navBarPlatformRightPage = PageFactory.buildNavBarPlatformRightPage();
         navBarSolutionPage = PageFactory.buildNavBarSolutionPage();
+        customersPage = PageFactory.buildCustomersPage();
     }
 
 }
