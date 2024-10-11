@@ -19,5 +19,8 @@ public class PageFactory {
     public static CustomersPage buildCustomersPage() {
         return new CustomersPage("/our-customers");
     }
+    public static NavBarResourcesPpage buildNavBarResourcesPpage() {
+        return new NavBarResourcesPpage("");
+    }
 
 }
