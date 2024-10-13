@@ -25,5 +25,11 @@ public class PageFactory {
     public static NavBarResourcesRightPage buildNavBarResourcesRightPage() {
         return new NavBarResourcesRightPage("");
     }
+    public static NavBarCompanyPage buildNavBarCompanyPage() {
+        return new NavBarCompanyPage("");
+    }
+    public static CareersPage buildCareersPage() {
+        return new CareersPage("/careers");
+    }
 
 }
