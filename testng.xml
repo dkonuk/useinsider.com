@@ -20,4 +20,16 @@
             <class name="tests.NavBarSolutionsPageTest"/>
         </classes>
     </test>
+    <test name="NavBarResourcesPageTest">
+        <classes>
+            <class name="tests.NavBarResourcesPageTest"/>
+        </classes>
+    </test>
+
+    <test name="NavBarResourcesRightPageTest">
+        <classes>
+            <class name="tests.NavBarResourcesRightPageTest"/>
+        </classes>
+    </test>
+
 </suite>
