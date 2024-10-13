@@ -13,4 +13,26 @@ public class NavBarResourcesPageTest extends BaseTest{
         pageManager.navBarResourcesPage.open();
         pageManager.homePage.acceptCookies.click();
     }
+    @Test
+    public void TestNavBarResourcesPage(){
+        Actions actions = Selenide.actions();
+        actions.click(pageManager.navBarResourcesPage.navBarResources).click(pageManager.navBarResourcesPage.takePlatformTour).pause(500).perform();
+        Selenide.switchTo().window(1);
+        Selenide.closeWindow();
+        Selenide.switchTo().window(0);
+        actions.click(pageManager.navBarResourcesPage.navBarResources).click(pageManager.navBarResourcesPage.cdpExplorer).perform();
+        Selenide.switchTo().window(1);
+        Selenide.closeWindow();
+        Selenide.switchTo().window(0);
+        actions.click(pageManager.navBarResourcesPage.navBarResources).click(pageManager.navBarResourcesPage.whatsappExplorer).perform();
+        Selenide.switchTo().window(1);
+        Selenide.closeWindow();
+        Selenide.switchTo().window(0);
+        actions.click(pageManager.navBarResourcesPage.navBarResources).click(pageManager.navBarResourcesPage.smsTemplatesLibrary).perform();
+        Selenide.switchTo().window(1);
+        Selenide.closeWindow();
+        Selenide.switchTo().window(0);
+        actions.click(pageManager.navBarResourcesPage.navBarResources).click(pageManager.navBarResourcesPage.productivityCalculator).perform();
+
+    }
 }

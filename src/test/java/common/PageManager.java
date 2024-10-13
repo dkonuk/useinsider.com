@@ -11,8 +11,8 @@ public class PageManager {
     public NavBarPlatformPage navBarPlatformPage;
     public NavBarPlatformRightPage navBarPlatformRightPage;
     public CustomersPage customersPage;
-    public NavBarResourcesPpage navBarResourcesPpage;
-
+    public NavBarResourcesPage navBarResourcesPage; // Updated class name
+    public NavBarResourcesRightPage navBarResourcesRightPage;
 
     public PageManager() {
         DriverFactory.initDriver();
@@ -22,7 +22,7 @@ public class PageManager {
         navBarPlatformRightPage = PageFactory.buildNavBarPlatformRightPage();
         navBarSolutionPage = PageFactory.buildNavBarSolutionPage();
         customersPage = PageFactory.buildCustomersPage();
-        navBarResourcesPpage = PageFactory.buildNavBarResourcesPpage();
+        navBarResourcesPage = PageFactory.buildNavBarResourcesPage(); // Updated method name
+        navBarResourcesRightPage = PageFactory.buildNavBarResourcesRightPage();
     }
-
 }

@@ -19,8 +19,11 @@ public class PageFactory {
     public static CustomersPage buildCustomersPage() {
         return new CustomersPage("/our-customers");
     }
-    public static NavBarResourcesPpage buildNavBarResourcesPpage() {
-        return new NavBarResourcesPpage("");
+    public static NavBarResourcesPage buildNavBarResourcesPage() {
+        return new NavBarResourcesPage("");
+    }
+    public static NavBarResourcesRightPage buildNavBarResourcesRightPage() {
+        return new NavBarResourcesRightPage("");
     }
 
 }
