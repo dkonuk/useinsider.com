@@ -31,5 +31,8 @@ public class PageFactory {
     public static CareersPage buildCareersPage() {
         return new CareersPage("/careers");
     }
+    public static QualityAssurancePage buildQualityAssurancePage() {
+        return new QualityAssurancePage("/careers");
+    }
 
 }

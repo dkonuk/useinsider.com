@@ -3,7 +3,6 @@ package common;
 import driver.DriverFactory;
 import pages.*;
 
-import java.sql.Driver;
 
 public class PageManager {
     public HomePage homePage;
@@ -15,6 +14,7 @@ public class PageManager {
     public NavBarResourcesRightPage navBarResourcesRightPage;
     public NavBarCompanyPage navBarCompanyPage;
     public CareersPage careersPage;
+    public QualityAssurancePage qualityAssurancePage;
 
     public PageManager() {
         DriverFactory.initDriver();
@@ -28,5 +28,6 @@ public class PageManager {
         navBarResourcesRightPage = PageFactory.buildNavBarResourcesRightPage();
         navBarCompanyPage = PageFactory.buildNavBarCompanyPage();
         careersPage = PageFactory.buildCareersPage();
+        qualityAssurancePage = PageFactory.buildQualityAssurancePage();
     }
 }

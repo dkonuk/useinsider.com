@@ -13,6 +13,7 @@ public class HomePage extends BasePage{
     public SelenideElement whyInsiderFirstLink = $("a[href='https://useinsider.com/why-insider']");
     public SelenideElement whyInsiderSecondLink = $("a[href='https://useinsider.com/compare-insider/']");
     public SelenideElement whyInsiderThirdLink = $("a[href='https://useinsider.com/insider-switch/']");
+    public SelenideElement seeAllTeamsButton = $x("//a[contains(text(),'See all teams')]");
 
 
 
