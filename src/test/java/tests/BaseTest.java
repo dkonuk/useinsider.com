@@ -12,7 +12,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
 import static driver.DriverFactory.maximize;
 
 public class BaseTest {
