@@ -1,35 +1,10 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="tests" thread-count="6">
-    <test name="NavBarPlatformRightPageTest">
-        <classes>
-            <class name="tests.NavBarPlatformRightPageTest"/>
-        </classes>
-    </test>
-    <test name="HomePageTest">
-        <classes>
-            <class name="tests.HomePageTest"/>
-        </classes>
-    </test>
-    <test name="NavBarPlatformPageTest">
-        <classes>
-            <class name="tests.NavBarPlatformPageTest"/>
-        </classes>
-    </test>
-    <test name="NavBarSolutionsPageTest">
-        <classes>
-            <class name="tests.NavBarSolutionsPageTest"/>
-        </classes>
-    </test>
-    <test name="NavBarResourcesPageTest">
-        <classes>
-            <class name="tests.NavBarResourcesPageTest"/>
-        </classes>
-    </test>
-
-    <test name="NavBarResourcesRightPageTest">
-        <classes>
-            <class name="tests.NavBarResourcesRightPageTest"/>
-        </classes>
+<suite name="Suite" parallel="methods" thread-count="8" >
+    <test name = "insider">
+        <packages>
+      <package name="tests.*"/>
+    </packages>
     </test>
 
 </suite>
+

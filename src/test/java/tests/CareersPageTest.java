@@ -21,11 +21,6 @@ public class CareersPageTest extends BaseTest {
         pageManager.homePage.seeAllTeamsButton.click();
         pageManager.careersPage.forEachSelenideElement(element -> {
             try {
-                //element.click();
-                // You might want to add some verification after each click
-                // For example:
-                // assertTrue(element.isDisplayed());
-
                 assertThat(element.isDisplayed()).isTrue();
                 System.out.println("Clicked element: " + element);
                 Actions actions = Selenide.actions();
