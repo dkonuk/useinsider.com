@@ -1,17 +1,24 @@
-FROM maven:3-jdk-8-alpine AS build
+# Use a Maven image to build the project
+FROM openjdk:22-jdk-slim AS build
+
+
+RUN apt-get update && apt-get install -y maven
 
 WORKDIR /app
 
 COPY . /app
 
-RUN mvn install
+RUN mvn  install
 
-FROM openjdk:8-jdk-alpine
+# Use a Selenium image to run the tests
+FROM --platform=linux/arm64 selenium/standalone-chromium:latest
 
 WORKDIR /app
 
-COPY --from=build /app/target/my-project-1.0-SNAPSHOT.jar .
+COPY --from=build /app /app
 
-EXPOSE 8080
+# Set environment variables for Selenide
+ENV SELENIDE_BROWSER=chrome
+ENV SELENIDE_REMOTE=http://localhost:4444/wd/hub
 
-CMD ["java", "-jar", "my-project-1.0-SNAPSHOT.jar"]
+CMD ["sh", "-c", "mvn test"]

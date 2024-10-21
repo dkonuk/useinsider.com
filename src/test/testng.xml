@@ -5,6 +5,7 @@
       <package name="tests.*"/>
     </packages>
     </test>
+    <parameter name="BROWSER" value="REMOTE"/>
 
 </suite>
 
