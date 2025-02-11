@@ -11,7 +11,7 @@ public class NavBarCompanyPageTest extends BaseTest {
     @BeforeMethod
     public void before() {
         pageManager.navBarCompanyPage.open();
-        pageManager.homePage.acceptCookies.click();
+        acceptCookies();
     }
 
     @Test

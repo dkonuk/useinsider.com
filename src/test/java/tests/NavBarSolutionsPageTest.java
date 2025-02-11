@@ -13,7 +13,7 @@ public class NavBarSolutionsPageTest extends BaseTest {
     @BeforeMethod
     public void before() {
         pageManager.homePage.open();
-        pageManager.homePage.acceptCookies.click();
+        acceptCookies();
     }
 
     @Test

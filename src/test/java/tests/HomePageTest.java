@@ -13,12 +13,13 @@ public class HomePageTest extends BaseTest {
     @BeforeMethod
     public void before() {
         pageManager.homePage.open();
+        acceptCookies();
     }
+
 
     @Test
     public void TestHomePage() {
         assertThat(pageManager.homePage.getUrl()).isEqualTo("https://useinsider.com/");
-        pageManager.homePage.acceptCookies.click();
         pageManager.homePage.navBar.shouldBe(Condition.visible);
         pageManager.homePage.logoReel.shouldBe(Condition.visible);
         Actions actions = Selenide.actions();

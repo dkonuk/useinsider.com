@@ -11,7 +11,7 @@ public class NavBarResourcesPageTest extends BaseTest{
     @BeforeMethod
     public void before(){
         pageManager.navBarResourcesPage.open();
-        pageManager.homePage.acceptCookies.click();
+        acceptCookies();
     }
     @Test
     public void TestNavBarResourcesPage(){

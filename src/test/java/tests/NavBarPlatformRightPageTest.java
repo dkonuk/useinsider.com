@@ -15,7 +15,7 @@ public class NavBarPlatformRightPageTest extends BaseTest {
     @BeforeMethod
     public void before() {
         pageManager.navBarPlatformRightPage.open();
-        pageManager.homePage.acceptCookies.click();
+        acceptCookies();
     }
     @Test
         //Iterating over children by declaring the method before. Suitable if there will be multiple tests with multiple children

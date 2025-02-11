@@ -13,7 +13,7 @@ public class CareersPageTest extends BaseTest {
     @BeforeMethod
     public void before(){
         pageManager.careersPage.open();
-        pageManager.homePage.acceptCookies.click();
+        acceptCookies();
 
     }
     @Test

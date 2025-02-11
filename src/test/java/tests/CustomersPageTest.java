@@ -12,7 +12,7 @@ public class CustomersPageTest extends BaseTest {
     @BeforeMethod
     public void before() {
         pageManager.customersPage.open();
-        pageManager.homePage.acceptCookies.click();
+        acceptCookies();
     }
 
     @Test

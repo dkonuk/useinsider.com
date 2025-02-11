@@ -5,6 +5,7 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import common.PageManager;
 import driver.DriverFactory;
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -37,6 +38,16 @@ public class BaseTest {
     @AfterClass
     public void tearDown(){
         DriverFactory.close();
+    }
+
+    public void acceptCookies() {
+        try {
+        if (pageManager.homePage.acceptCookies.isDisplayed()) {
+            pageManager.homePage.acceptCookies.click();
+        }
+    } catch (NoSuchElementException e) {
+        System.out.println("Accept Cookies button is not present. Continuing test...");
+    }
     }
 
     public int iterateOverAllChildren(String cssSelector, String childSelector) {

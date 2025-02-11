@@ -13,7 +13,7 @@ public class NavBarPlatformPageTest extends BaseTest {
     @BeforeMethod
     public void before() {
         pageManager.navBarPlatformPage.open();
-        pageManager.homePage.acceptCookies.click();
+        acceptCookies();
     }
 
     @Test
